@@ -1,0 +1,1 @@
+select ID,Description from tritonsuite.core.location where propertyId = :propertyId and LocationTypeCode='R'

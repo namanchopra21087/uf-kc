@@ -1,0 +1,7 @@
+include 'property-events-adapter-api-rest'
+include 'property-events-api'
+include 'property-events-application-services'
+include 'property-events-domain'
+include 'property-events-spring-launcher'
+include 'property-events-spring-modules'
+include 'property-events-ui'

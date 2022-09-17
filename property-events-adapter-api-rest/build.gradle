@@ -1,0 +1,11 @@
+apply plugin: 'unifocus-java-module'
+
+dependencies {
+   api 'com.unifocus:framework-services-web-module'
+   api 'com.unifocus:framework-spring-hal'
+   api project(':property-events-api')
+
+   testImplementation 'com.unifocus:framework-spring-web-test'
+   testImplementation project(':property-events-spring-modules')
+}
+

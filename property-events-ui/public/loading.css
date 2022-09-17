@@ -1,0 +1,80 @@
+#unifocus-loading-div {
+   width: 48px;
+   height: 48px;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   margin: -24px 0 0 -24px;
+   z-index: 999;
+}
+
+.unifocus-loading-spin {
+   font-variant: tabular-nums;
+   line-height: 1.5715;
+   list-style: none;
+   font-feature-settings: "tnum";
+   color: rgb(24,144,255);
+   text-align: center;
+}
+
+.unifocus-loading-spin-dot {
+   position: relative;
+   display: inline-block;
+   font-size: 32px;
+   width: 1em;
+   height: 1em;
+   transform: rotate(45deg);
+   -webkit-animation: unifocusLoadingRotate 1.2s infinite linear;
+   animation: unifocusLoadingRotate 1.2s infinite linear;
+}
+
+.unifocus-loading-spin-dot-item {
+   position: absolute;
+   display: block;
+   width: 14px;
+   height: 14px;
+   background-color: rgb(24,144,255);
+   border-radius: 100%;
+   transform: scale(0.75);
+   transform-origin: 50% 50%;
+   opacity: 0.3;
+   -webkit-animation: unifocusLoadingSpinMove 1s infinite linear alternate;
+   animation: unifocusLoadingSpinMove 1s infinite linear alternate;
+}
+
+.unifocus-loading-spin-dot-item:nth-child(1) {
+   top: 0;
+   left: 0;
+}
+
+.unifocus-loading-spin-dot-item:nth-child(2) {
+   top: 0;
+   right: 0;
+   -webkit-animation-delay: 0.4s;
+   animation-delay: 0.4s;
+}
+
+.unifocus-loading-spin-dot-item:nth-child(3) {
+   right: 0;
+   bottom: 0;
+   -webkit-animation-delay: 0.8s;
+   animation-delay: 0.8s;
+}
+
+.unifocus-loading-spin-dot-item:nth-child(4) {
+   bottom: 0;
+   left: 0;
+   -webkit-animation-delay: 1.2s;
+}
+
+@keyframes unifocusLoadingSpinMove {
+   to {
+      opacity: 1;
+   }
+}
+
+@keyframes unifocusLoadingRotate {
+   to {
+      transform: rotate(405deg);
+   }
+}

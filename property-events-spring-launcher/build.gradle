@@ -1,0 +1,18 @@
+apply plugin: 'unifocus-java-module'
+apply plugin: 'unifocus-spring-boot-web-app'
+
+bootWar {
+   archiveFileName = 'unifocus-property-events.war'
+}
+
+dependencies {
+   implementation 'com.unifocus:framework-application-web'
+
+   implementation "com.unifocus:uniportal-support-spring-launcher:${uniportalSupportVersion}"
+   implementation "com.unifocus:rms-security-application-modules:${rmsSecurityVersion}"
+   implementation "com.unifocus:singularity-support-spring-modules:${singularitySupportVersion}"
+
+   implementation project(':property-events-spring-modules')
+
+   testImplementation 'com.unifocus:framework-application-web-test'
+}

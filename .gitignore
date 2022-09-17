@@ -1,0 +1,14 @@
+.DS_Store
+.idea
+*.iml
+.gradle
+build
+out
+!.gitkeep
+yarn.lock
+node_modules
+/coverage/
+/dist/
+.project
+.settings
+.classpath

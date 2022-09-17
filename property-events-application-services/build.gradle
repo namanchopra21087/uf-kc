@@ -1,0 +1,13 @@
+apply plugin: 'unifocus-java-module'
+
+dependencies {
+   api 'com.unifocus:framework-services-impl'
+   api project(':property-events-api')
+   api project(':property-events-domain')
+   compileOnly 'org.projectlombok:lombok'
+   annotationProcessor 'org.projectlombok:lombok:1.18.24'
+   implementation 'org.springframework.boot:spring-boot-starter-web'
+
+   testImplementation 'com.unifocus:framework-services-module'
+   testImplementation 'com.unifocus:framework-spring-data-test'
+}

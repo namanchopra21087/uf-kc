@@ -1,0 +1,83 @@
+{
+   "name": "guest-scope-dashboard",
+   "version": "1.0.0",
+   "private": true,
+   "scripts": {
+      "analyze": "react-app-scripts build --analyze",
+      "build": "npm run bundle-localization && npm run build-js",
+      "build-js": "react-app-scripts build",
+      "bundle-localization": "react-app-scripts bundle-localization ../property-events-spring-modules/src/main/resources",
+      "start": "npm run bundle-localization && npm run start-js",
+      "start-js": "react-app-scripts start",
+      "test": "cross-env NODE_ICU_DATA=node_modules/full-icu react-app-scripts test --env=jsdom",
+      "test:withCoverage": "cross-env NODE_ICU_DATA=node_modules/full-icu react-app-scripts test --env=jsdom --collectCoverage=true"
+   },
+   "dependencies": {
+      "@fortawesome/pro-light-svg-icons": "5.15.2",
+      "@fortawesome/pro-regular-svg-icons": "5.15.2",
+      "@fortawesome/pro-solid-svg-icons": "5.15.2",
+      "@js-joda/core": "3.2.0",
+      "@redux-saga/core": "^1.1.3",
+      "@testing-library/jest-dom": "5.11.9",
+      "@testing-library/react": "11.2.5",
+      "@testing-library/user-event": "13.0.1",
+      "@types/jest": "26.0.20",
+      "@types/node": "14.14.35",
+      "@types/react": "16.9.56",
+      "@types/react-dom": "16.9.9",
+      "@types/react-redux": "7.1.16",
+      "@types/react-router-dom": "5.1.7",
+      "@types/victory": "33.1.4",
+      "@unifocus/eslint-plugin": "7.7.2",
+      "@unifocus/js-utils": "7.7.2",
+      "@unifocus/react-app-scripts": "7.7.2",
+      "@unifocus/react-application": "7.7.2",
+      "@unifocus/react-components": "7.7.2",
+      "@unifocus/react-icons": "7.7.2",
+      "@unifocus/react-uf-grid": "7.7.2",
+      "@unifocus/theme-core": "7.7.2",
+      "ag-grid-community": "26.2.1",
+      "ag-grid-enterprise": "26.2.1",
+      "ag-grid-react": "26.2.0",
+      "axios": "0.21.1",
+      "axios-mock-adapter": "1.19.0",
+      "history": "5.0.0",
+      "http-proxy-middleware": "1.0.6",
+      "jest-canvas-mock": "2.3.1",
+      "react": "16.14.0",
+      "react-dom": "16.14.0",
+      "react-redux": "7.2.2",
+      "react-router-dom": "5.2.0",
+      "redux": "4.0.5",
+      "redux-saga": "1.1.3",
+      "redux-saga-test-plan": "4.0.1",
+      "reselect": "4.0.0",
+      "serializr": "2.0.5",
+      "typescript": "3.9.7",
+      "victory": "35.4.11"
+   },
+   "browserslist": {
+      "production": [
+         ">0.2%",
+         "not dead",
+         "not op_mini all"
+      ],
+      "development": [
+         "last 1 chrome version",
+         "last 1 firefox version",
+         "last 1 safari version"
+      ]
+   },
+   "homepage": ".",
+   "jest": {
+      "collectCoverageFrom": [
+         "**/*.{ts, tsx}",
+         "!**/node_modules/**",
+         "!**/*.d.ts",
+         "!**/setupTests.ts",
+         "!**/localized-messages.ts",
+         "!**/registerServiceWorker.ts",
+         "!**/index.tsx"
+      ]
+   }
+}

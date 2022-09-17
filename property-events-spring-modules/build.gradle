@@ -1,0 +1,9 @@
+apply plugin: 'unifocus-java-module'
+
+dependencies {
+   api 'com.unifocus:framework-application-web'
+   api 'com.unifocus:framework-services-module'
+
+   api project(':property-events-adapter-api-rest')
+   api project(':property-events-application-services')
+}

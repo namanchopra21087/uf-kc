@@ -1,0 +1,35 @@
+buildscript {
+   repositories {
+      mavenLocal()
+      mavenCentral()
+      gradlePluginPortal()
+      maven {
+         name 'libs-release'
+         url "${unifocusArtifactoryBaseUrl}/libs-release"
+         credentials {
+            username unifocusMavenUser
+            password unifocusMavenPassword
+         }
+      }
+      maven {
+         name 'libs-snapshot'
+         url "${unifocusArtifactoryBaseUrl}/libs-snapshot"
+         credentials {
+            username unifocusMavenUser
+            password unifocusMavenPassword
+         }
+      }
+   }
+
+   dependencies {
+      classpath "com.unifocus:framework-spring-boot-gradle-plugin:${frameworkVersion}"
+      classpath "com.unifocus:gradle-plugins-bom:${gradlePluginsVersion}"
+   }
+}
+
+apply plugin: 'unifocus-project'
+apply plugin: 'unifocus-sonar'
+
+project.ext {
+   contextName = 'property-events'
+}
