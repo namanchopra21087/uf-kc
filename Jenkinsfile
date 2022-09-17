@@ -48,7 +48,7 @@ pipeline {
 }
 
 def getArtifacts(params) {
-   def artifacts = 'property-events-spring-launcher/build/libs/unifocus-property-events.war'
+   def artifacts = 'property-events-spring-launcher/build/libs/xyz-property-events.war'
 
    echo "Artifacts = ${artifacts}"
 
@@ -70,12 +70,12 @@ def tagBuild(params) {
 
 def sendEmail() {
    emailext(
-      to: 'build-watchers@unifocus.com',
+      to: 'build-watchers@xyz.com',
       subject: '$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!',
       body: '''$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:
 
 Check console output at $BUILD_URL to view the results.''',
-      replyTo: 'jenkins@unifocus.com',
+      replyTo: 'jenkins@xyz.com',
       mimeType: 'text/html',
       attachLog: true,
       recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']])

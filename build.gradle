@@ -5,30 +5,30 @@ buildscript {
       gradlePluginPortal()
       maven {
          name 'libs-release'
-         url "${unifocusArtifactoryBaseUrl}/libs-release"
+         url "${xyzArtifactoryBaseUrl}/libs-release"
          credentials {
-            username unifocusMavenUser
-            password unifocusMavenPassword
+            username xyzMavenUser
+            password xyzMavenPassword
          }
       }
       maven {
          name 'libs-snapshot'
-         url "${unifocusArtifactoryBaseUrl}/libs-snapshot"
+         url "${xyzArtifactoryBaseUrl}/libs-snapshot"
          credentials {
-            username unifocusMavenUser
-            password unifocusMavenPassword
+            username xyzMavenUser
+            password xyzMavenPassword
          }
       }
    }
 
    dependencies {
-      classpath "com.unifocus:framework-spring-boot-gradle-plugin:${frameworkVersion}"
-      classpath "com.unifocus:gradle-plugins-bom:${gradlePluginsVersion}"
+      classpath "com.xyz:framework-spring-boot-gradle-plugin:${frameworkVersion}"
+      classpath "com.xyz:gradle-plugins-bom:${gradlePluginsVersion}"
    }
 }
 
-apply plugin: 'unifocus-project'
-apply plugin: 'unifocus-sonar'
+apply plugin: 'xyz-project'
+apply plugin: 'xyz-sonar'
 
 project.ext {
    contextName = 'property-events'
