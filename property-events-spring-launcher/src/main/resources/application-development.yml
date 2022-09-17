@@ -1,28 +1,16 @@
 server.port: 8080
-uniportal:
+portal:
    dataSource:
-      url: //ctx-qa-sql-001/uniportal_qa;encrypt=true;trustServerCertificate=true
-      userName: qaAdmin
-      password: 13AD4B93F5549DE4E72A23FF5CD63D07
-      driver: MSSQL
+      url: 
+      userName: 
+      password: 
+      driver: 
 
-unifocus:
+xyz:
    property-events:
       datasource:
-         url: //3.225.1.213/tritonsuite;encrypt=true;trustServerCertificate=true
-         username: sa
-         password: B92A18161DCA2511
-         driver: MSSQL
-         showSql: false
-
-#unifocus.uniportalServerBaseUrl: http://localhost:3000
-#unifocus.loginServerUrl: http://localhost:3000/uniportal/login/index.html
-#unifocus.portal.idpPageUrl: http://localhost:3000/uniportal/sso/index.html
-#unifocus.portal.loginPageUrl: http://localhost:3000/uniportal/login/index.html
-#unifocus.ssoPageUrl: https://qa-uniportal.unifocus.com/uniportal/sso/index.html
-unifocus.base-urls:
-   uniportal: https://qa-uniportal.unifocus.com
-   SURVEY_SCOPE_DASHBOARDS: http://localhost:3000
-   #uniportal: http://localhost:3000
-unifocus.google-analytics.account: UA-63503313-4
-unifocus.googleAnalyticsAccount: UA-63503313-4
+         url: 
+         username: 
+         password: 
+         driver: 
+         showSql: 
